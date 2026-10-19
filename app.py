@@ -4,6 +4,9 @@ Streamlit Web App: ออกแบบแผ่นเหล็กรองฐา�
 
 รันด้วย:  streamlit run app.py
 """
+# import pandas ให้ครบก่อน plotly: plotly อ่าน pandas จาก sys.modules ตรง ๆ
+# ถ้า pandas ยังโหลดไม่เสร็จ (พบบน Streamlit Cloud / Python 3.14) จะเกิด AttributeError ตอนวาดรูป
+import pandas  # noqa: F401
 import plotly.graph_objects as go
 import streamlit as st
 
